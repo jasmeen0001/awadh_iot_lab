@@ -1,10 +1,71 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: CPSlab(),
+    );
+  }
+}
+
+
 class CPSlab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      body: Column(
+        children: [
+          Card(
+            elevation: 5,
+            margin: EdgeInsets.all(10),
+            child: Stack(
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Image.asset(
+                        'assets/images/awadh_logo.jpeg',
+                        height: 55,
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/home');
+                        },
+                        child: Text('Home'),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/cps_lab_hardware');
+                        },
+                        child: Text('CPS Lab Hardwares'),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/cpsLab');
+                        },
+                        child: Text('CPS Lab Tutorial'),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/aboutUs');
+                        },
+                        child: Text('About Us'),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+       AppBar(
         title: Text(
           'CPS LAB TUTORIALS',
           
@@ -15,7 +76,9 @@ class CPSlab extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
+       Expanded(
+            child: Container(
+      
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("./../assets/assets/images/bg_for_CPS_tutorials.png"),
@@ -64,10 +127,10 @@ class CPSlab extends StatelessWidget {
                 ),
                 buildCardWithImage(
                   context,
-                  'LCD Experiment',
-                  'assets/images/LCD_Display-removebg-preview.png',
+                  'Relay Experiment',
+                  'assets/images/relay_image-removebg-preview.png',
                   () {
-                    Navigator.pushNamed(context, '/LCD_Display-removebg-preview.png');
+                    Navigator.pushNamed(context, '/Relay_exp');
                   },
                 ),
                 buildCardWithImage(
@@ -100,7 +163,11 @@ class CPSlab extends StatelessWidget {
             ),
           ),
         ),
-      ),
+            ),
+       ),
+      
+        ],
+    ),
     );
   }
 

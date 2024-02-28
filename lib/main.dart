@@ -8,10 +8,12 @@ import 'lis3dh_experiment.dart';
 import 'ContactUS.dart';
 import 'SHT40_Experiment.dart';
 import 'stts751.dart';
-import 'LCD_exp.dart';
+import 'Relay.dart';
 import 'button_exp.dart';
 import 'CPS_lab_hardware.dart';
 import 'about_us.dart';
+
+
 
 void main() {
   runApp(MyApp());
@@ -26,9 +28,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
+      initialRoute: '/home',
       routes: {
-        '/': (context) => MyHomePage(),
+        '/home': (context) => MyHomePage(),
         '/weather': (context) => WeatherData(),
         '/co2Sensor': (context) => Co2Sensor(),
         '/cpsLab': (context) => CPSlab(),
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
         '/STTS751_exp': (context) => STTS751(),
         '/lis3dh': (context) => LIS3DH(),
         '/ContactUS': (context) => Contact(),
-        '/LCD_exp': (context) => LCDExp(),
+        '/Relay_exp': (context) => RelayExp(),
         '/cps_lab_hardware': (context) => CPSLabSetupPage(),
         '/aboutUs': (context) => AboutUsPage(),
       },
@@ -81,7 +83,7 @@ class MyHomePage extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, '');
+                              Navigator.pushNamed(context, '/home');
                             },
                             child: Text('Home'),
                           ),

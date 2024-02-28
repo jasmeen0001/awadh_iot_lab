@@ -1,22 +1,82 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: AboutUsPage(),
+    );
+  }
+}
+
 class AboutUsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'ABOUT US',
-          style: TextStyle(
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 81, 34, 3)
-          ),
-        ),
-      ),
       body: SingleChildScrollView(
-        child: Stack(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Card(
+              elevation: 5,
+              margin: EdgeInsets.all(10),
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Image.asset(
+                          'assets/images/awadh_logo.jpeg',
+                          height: 55,
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/home');
+                          },
+                          child: Text('Home'),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/cps_lab_hardware');
+                          },
+                          child: Text('CPS Lab Hardwares'),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/cpsLab');
+                          },
+                          child: Text('CPS Lab Tutorial'),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/aboutUs');
+                          },
+                          child: Text('About Us'),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            AppBar(
+              title: Text(
+                'ABOUT US',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 81, 34, 3),
+                ),
+              ),
+            ),
+
             Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -25,29 +85,29 @@ class AboutUsPage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              child: Container(
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(height: 20),
-                      Text(
-                        'Preamble',
-                        style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black),
-                      ),
-                      SizedBox(height: 10),
-                      Text(
-                        'About iHub-AWaDH',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 2, 2, 2)),
-                      ),
+              child: Padding(
+                padding:
+                const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 20),
+                    Text(
+                      'Preamble',
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'About iHub-AWaDH',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 2, 2, 2)),
+                    ),
+                    SizedBox(height: 10),
                       SizedBox(height: 10),
                       Text(
                         'iHub-AWaDH, which stands for Innovation Hub for Agriculture and Water Technology Development Hub, is a dedicated initiative hosted at IIT Ropar Technology and Innovation Foundation established under National Mission on Interdisciplinary Cyber Physical Systems by Department of Science and Technology, Government of India. It aims to foster and promote deep tech innovation in the domains of Agriculture and Water, leveraging cutting-edge technologies like Cyber Physical Systems (CPS), Internet of Things (IoT), Artificial Intelligence (AI), and more. The iHub-AWaDH plays a pivotal role in accelerating the growth of startups, driving research, and building a strong ecosystem to address critical challenges in the agricultural and water sectors. Through strategic partnerships, incubation support, and collaborative programs, iHub-AWaDH aims to bring positive transformation and sustainable solutions for a better future.',
@@ -138,11 +198,17 @@ class AboutUsPage extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
           ],
-        ),
-      ),
-    );
+            ),
+          
+            
+       ),
+          
+        );
+      
+       
+  
+   
   }
 }
 

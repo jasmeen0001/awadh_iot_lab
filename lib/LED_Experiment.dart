@@ -35,10 +35,14 @@ class _LEDexperimentState extends State<LEDexperiment> {
   @override
   Widget build(BuildContext context) {
     List<String> pdfUrls = [
-      'assets/pdf/LED1.pdf',
-      'assets/pdf/LED2.pdf',
-      'assets/pdf/LED3.pdf',
-      'assets/pdf/LED4.pdf'
+      'assets/pdf/LEDD1.pdf',
+      'assets/pdf/LEDD2.pdf',
+      'assets/pdf/LEDD3.pdf',
+      'assets/pdf/LEDD4.pdf',
+      'assets/pdf/LEDD5.pdf',
+      'assets/pdf/LEDD6.pdf'
+      
+
       // 'https://drive.google.com/uc?export=view&id=1XJmkj5y95kYLwkPF51hg0iT4ggimF-pz',
       // 'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
       // 'https://drive.google.com/uc?export=view&id=1wGvoUSi97wJkYJctDgECdC5sQBM3wmcq',
@@ -77,8 +81,23 @@ class _LEDexperimentState extends State<LEDexperiment> {
               style: TextStyle(color: Colors.blue),
             ),
           ),
+          TextButton(
+            onPressed: () => _openPdf(4),
+            child: Text(
+              'EXP 5',
+              style: TextStyle(color: Colors.blue),
+            ),
+          ),
+          TextButton(
+            onPressed: () => _openPdf(5),
+            child: Text(
+              'EXP 6',
+              style: TextStyle(color: Colors.blue),
+            ),
+          ),
         ],
       ),
+      
       body: Column(
         children: [
           Expanded(

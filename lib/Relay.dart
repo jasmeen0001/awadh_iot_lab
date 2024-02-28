@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-class SHT40_Experiment extends StatefulWidget {
-    const SHT40_Experiment({Key? key}) : super(key: key);
+class RelayExp extends StatefulWidget {
+  const RelayExp({Key? key}) : super(key: key);
   @override
-  _SHT40_ExperimentState createState() => _SHT40_ExperimentState();
+  _RelayExpState createState() => _RelayExpState();
 }
 
-class _SHT40_ExperimentState extends State<SHT40_Experiment> {
+class _RelayExpState extends State<RelayExp> {
  int _selectedPdfIndex = 0;
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
   late PdfViewerController _pdfViewerController;
@@ -35,8 +35,8 @@ class _SHT40_ExperimentState extends State<SHT40_Experiment> {
   @override
   Widget build(BuildContext context) {
     List<String> pdfUrls = [
-      'assets/pdf/SHT401.pdf',
-      'assets/pdf/SHT402.pdf',
+      'assets/pdf/Relay.pdf',
+      
 
     
       // 'https://drive.google.com/uc?export=view&id=1XJmkj5y95kYLwkPF51hg0iT4ggimF-pz',
@@ -47,7 +47,7 @@ class _SHT40_ExperimentState extends State<SHT40_Experiment> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('LIS3DH Experiment'),
+        title: Text('Relay Experint'),
         actions: [
           TextButton(
             onPressed: () => _openPdf(0),
@@ -56,13 +56,7 @@ class _SHT40_ExperimentState extends State<SHT40_Experiment> {
               style: TextStyle(color: Colors.blue),
             ),
           ),
-          TextButton(
-            onPressed: () => _openPdf(1),
-            child: Text(
-              'EXP 2',
-              style: TextStyle(color: Colors.blue),
-            ),
-          ),
+          
           
         ],
       ),
@@ -108,3 +102,5 @@ class _SHT40_ExperimentState extends State<SHT40_Experiment> {
     );
   }
 }
+
+
