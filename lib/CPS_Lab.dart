@@ -21,49 +21,77 @@ class CPSlab extends StatelessWidget {
       body: Column(
         children: [
           Card(
-            elevation: 5,
-            margin: EdgeInsets.all(10),
-            child: Stack(
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Image.asset(
-                        'assets/images/awadh_logo.jpeg',
-                        height: 55,
+                elevation: 5,
+                margin: EdgeInsets.all(10),
+                
+                child: Stack(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Image.asset(
+                            'assets/images/awadh_logo.jpeg',
+                            height: 55,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/home');
+                            },
+                            style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 247, 216, 178), // Set the background color of the button
+              ),
+                            child: Text('Home',
+                            style: TextStyle(
+                              color: Colors.black
+                            ),),
+                            
+                          
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/cps_lab_hardware');
+                            },
+                            style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 247, 216, 178), // Set the background color of the button
+              ),
+                            child: Text('CPS Lab Hardwares',
+                            style: TextStyle(
+                              color: Colors.black
+                            ),),
+                            
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/cpsLab');
+                            },
+                            style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 247, 216, 178), // Set the background color of the button
+              ),
+                            child: Text('CPS Lab Tutorial',
+                            style: TextStyle(
+                              color: Colors.black
+                            ),),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/aboutUs');
+                            },
+                            style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 247, 216, 178), // Set the background color of the button
+              ),
+                            child: Text('About Us',
+                            style: TextStyle(
+                              color: Colors.black
+                            ),),
+                          ),
+                        ],
                       ),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/home');
-                        },
-                        child: Text('Home'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/cps_lab_hardware');
-                        },
-                        child: Text('CPS Lab Hardwares'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/cpsLab');
-                        },
-                        child: Text('CPS Lab Tutorial'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/aboutUs');
-                        },
-                        child: Text('About Us'),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-          ),
+              ),
 
        AppBar(
         title: Text(
