@@ -60,13 +60,25 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('./../assets/assets/images/back_front_new.png'),
-            fit: BoxFit.cover,
-          ),
-        ),
+      body: Center(
+        child: Container(
+            width: 1200,
+            height: 700,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/back_front_new.png'), // Set your background image here
+                fit: BoxFit.cover,
+              ),
+              borderRadius: BorderRadius.circular(15),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 5,
+                  offset: Offset(0, 3),
+                ),
+              ],
+            ),
+      
         
         child: SingleChildScrollView(
           physics: AlwaysScrollableScrollPhysics(),
@@ -75,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 70, left:115, right: 115),
+                
                 child: 
               Card(
                 elevation: 5,
@@ -205,7 +217,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ).toList(),
                     ),
              Container(
-                margin: EdgeInsets.only(bottom: 170, left:115, right: 115),
+                
                 child: 
               
               
@@ -261,6 +273,7 @@ class _MyHomePageState extends State<MyHomePage> {
   
 
                   ],
+          ),
   ),
 ),
 
@@ -271,7 +284,7 @@ class _MyHomePageState extends State<MyHomePage> {
             
           ),
         );
-            
+        
       
       
     

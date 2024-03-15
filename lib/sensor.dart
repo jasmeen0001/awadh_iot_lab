@@ -20,6 +20,16 @@ class Sensorspage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+          AppBar(
+              title: Text(
+                'SENSORS',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 81, 34, 3),
+                ),
+              ),
+            ),
           
        
        Expanded(
