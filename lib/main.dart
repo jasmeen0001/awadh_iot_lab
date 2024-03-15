@@ -60,10 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 235, 180, 131),
       body: Center(
         child: Container(
-            width: 1200,
-            height: 700,
+            width: 1400,
+            height: 800,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/back_front_new.png'), // Set your background image here
