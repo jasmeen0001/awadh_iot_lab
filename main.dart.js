@@ -16182,7 +16182,7 @@ _.d=d
 _.e=e
 _.f=f},
 a6P:function a6P(){},
-iu(a,b){return new A.J7(a,b,null)},
+iu(a,b,c){return new A.J7(a,c,b,null)},
 Jb(a){var s=a.yj(t.Np)
 if(s!=null)return s
 throw A.c(A.ux(A.b([A.o1("Scaffold.of() called with a context that does not contain a Scaffold."),A.cb("No Scaffold ancestor could be found starting from the context that was passed to Scaffold.of(). This usually happens when the context provided is from the same StatefulWidget as that whose build function actually creates the Scaffold widget being sought."),A.Fr('There are several ways to avoid this problem. The simplest is to use a Builder to get a context that is "under" the Scaffold. For an example of this, please see the documentation for Scaffold.of():\n  https://api.flutter.dev/flutter/material/Scaffold/of.html'),A.Fr("A more efficient solution is to split your build function into several widgets. This introduces a new context from which you can obtain the Scaffold. In this solution, you would have an outer widget that creates the Scaffold populated by instances of your new inner widgets, and then in these inner widgets you would use Scaffold.of().\nA less elegant but more expedient solution is assign a GlobalKey to the Scaffold, then use the key.currentState property to obtain the ScaffoldState rather than using the Scaffold.of() function."),a.aQA("The context used was")],t._)))},
@@ -16280,9 +16280,11 @@ _.b=c
 _.c=null},
 aGj:function aGj(a,b){this.a=a
 this.b=b},
-J7:function J7(a,b,c){this.e=a
-this.f=b
-this.a=c},
+J7:function J7(a,b,c,d){var _=this
+_.e=a
+_.f=b
+_.ch=c
+_.a=d},
 Ax:function Ax(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p){var _=this
 _.d=a
 _.e=b
@@ -56258,7 +56260,7 @@ p=t.p
 q=A.q8(A.eD(B.au,A.b([new A.b9(new A.al(10,10,10,10),A.cG(A.b([m,l,s,r,A.f8(A.aj("About Us",n,n,n,A.bb(n,n,B.l,n,n,n,n,n,n,n,n,n,n,n,n,n,n,!0,n,n,n,n,n,n,n,n),n,n,n),new A.aeO(a),q)],p),B.v,n,B.h8,B.n,n),n)],p),B.F,B.at,n),n,5,new A.al(10,10,10,10))
 r=A.iS(n,A.aj("CPS LAB TUTORIALS",n,n,n,A.bb(n,n,A.v(255,81,34,3),n,n,n,n,n,n,n,n,28,n,n,B.aA,n,n,!0,n,n,n,n,n,n,n,n),n,n,n))
 s=A.u8(B.cT,new A.jx("./../assets/assets/images/bg_for_CPS_tutorials.png",n,n))
-return A.iu(n,A.bU(A.b([q,r,A.cO(A.b8(n,A.ej(A.jc(A.aTu(B.F2,A.b([o.mS(a,"LED and Button Experiments","assets/images/LED_exp.jpg",new A.aeP(a)),o.mS(a,"LIS3DH Experiment","assets/images/LIS3DH_Sensor_Board-removebg-preview.png",new A.aeQ(a)),o.mS(a,"SHT40 Experiment","assets/images/SHT40_Sensor_Board-removebg-preview.png",new A.aeR(a)),o.mS(a,"STTS751 Experiment","assets/images/STTS751_Sensor_Board-removebg-preview.png",new A.aeS(a)),o.mS(a,"Relay Experiment","assets/images/relay_image-removebg-preview.png",new A.aeT(a)),o.mS(a,"CO2 Sensor","assets/images/Co2_Sensor_new.png",new A.aeU(a)),o.mS(a,"Weather Sensor",u.J,new A.aeV(a)),o.mS(a,"Contact Us","assets/images/contact.jpg",new A.aeN(a))],p),20,20),n,n,n,B.a_),n,n),B.j,n,n,new A.ct(n,s,n,n,n,n,B.Y),n,n,n,n,n,n,n),1)],p),B.v,n,B.u,B.n))},
+return A.iu(n,n,A.bU(A.b([q,r,A.cO(A.b8(n,A.ej(A.jc(A.aTu(B.F2,A.b([o.mS(a,"LED and Button Experiments","assets/images/LED_exp.jpg",new A.aeP(a)),o.mS(a,"LIS3DH Experiment","assets/images/LIS3DH_Sensor_Board-removebg-preview.png",new A.aeQ(a)),o.mS(a,"SHT40 Experiment","assets/images/SHT40_Sensor_Board-removebg-preview.png",new A.aeR(a)),o.mS(a,"STTS751 Experiment","assets/images/STTS751_Sensor_Board-removebg-preview.png",new A.aeS(a)),o.mS(a,"Relay Experiment","assets/images/relay_image-removebg-preview.png",new A.aeT(a)),o.mS(a,"CO2 Sensor","assets/images/Co2_Sensor_new.png",new A.aeU(a)),o.mS(a,"Weather Sensor",u.J,new A.aeV(a)),o.mS(a,"Contact Us","assets/images/contact.jpg",new A.aeN(a))],p),20,20),n,n,n,B.a_),n,n),B.j,n,n,new A.ct(n,s,n,n,n,n,B.Y),n,n,n,n,n,n,n),1)],p),B.v,n,B.u,B.n))},
 mS(a,b,c,d){var s,r,q,p=null,o=B.d.aq(127.5),n=A.v(o,255,255,255),m=A.ml(10)
 o=A.b([new A.bR(2,B.P,A.v(o,158,158,158),new A.e(0,3),5)],t.E)
 s=A.fa(c,p,p,p)
@@ -56310,7 +56312,7 @@ r=A.f9(o,o,A.v(255,247,216,178),o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o)
 r=A.f8(A.aj("CPS Lab Tutorial",o,o,o,A.bb(o,o,B.l,o,o,o,o,o,o,o,o,o,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),new A.aeH(a),r)
 q=A.f9(o,o,A.v(255,247,216,178),o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o)
 p=t.p
-return A.iu(o,A.bU(A.b([A.q8(A.eD(B.au,A.b([new A.b9(new A.al(10,10,10,10),A.cG(A.b([n,m,s,r,A.f8(A.aj("About Us",o,o,o,A.bb(o,o,B.l,o,o,o,o,o,o,o,o,o,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),new A.aeI(a),q)],p),B.v,o,B.h8,B.n,o),o)],p),B.F,B.at,o),o,5,new A.al(10,10,10,10)),A.iS(o,A.aj("CPS LAB HARDWARE SETUP",o,o,o,A.bb(o,o,A.v(255,81,34,3),o,o,o,o,o,o,o,o,28,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o)),A.cO(A.b8(o,new A.ln(new A.aeJ(),o),B.j,o,o,new A.ct(o,A.u8(B.cT,new A.jx("assets/images/CPS_Lab_Hardware.png",o,o)),o,o,o,o,B.Y),o,o,o,o,o,o,o),1)],p),B.v,o,B.u,B.n))}}
+return A.iu(o,o,A.bU(A.b([A.q8(A.eD(B.au,A.b([new A.b9(new A.al(10,10,10,10),A.cG(A.b([n,m,s,r,A.f8(A.aj("About Us",o,o,o,A.bb(o,o,B.l,o,o,o,o,o,o,o,o,o,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),new A.aeI(a),q)],p),B.v,o,B.h8,B.n,o),o)],p),B.F,B.at,o),o,5,new A.al(10,10,10,10)),A.iS(o,A.aj("CPS LAB HARDWARE SETUP",o,o,o,A.bb(o,o,A.v(255,81,34,3),o,o,o,o,o,o,o,o,28,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o)),A.cO(A.b8(o,new A.ln(new A.aeJ(),o),B.j,o,o,new A.ct(o,A.u8(B.cT,new A.jx("assets/images/CPS_Lab_Hardware.png",o,o)),o,o,o,o,B.Y),o,o,o,o,o,o,o),1)],p),B.v,o,B.u,B.n))}}
 A.aeF.prototype={
 $0(){A.e9(this.a,"/home",t.X)},
 $S:0}
@@ -56332,7 +56334,7 @@ P(a){var s=null,r=t.p
 return A.q8(new A.Fv(A.aj(this.c,s,s,s,A.bb(s,s,A.v(255,40,16,1),s,s,s,s,s,s,s,s,s,s,s,B.aA,s,s,!0,s,s,s,s,s,s,s,s),s,s,s),A.b([new A.b9(B.cX,A.bU(A.b([A.aj(this.d,s,s,s,A.bb(s,s,B.IK,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s,s),A.b5(s,16,s),A.fa(this.e,s,150,s)],r),B.bS,s,B.u,B.n),s)],r),s),s,2,new A.al(0,0,0,16))}}
 A.ya.prototype={
 P(a){var s=null,r="assets/assets/images/person.jpg",q=t.p
-return A.iu(A.iS(s,A.aj("Contacts",s,s,s,s,s,s,s)),A.eD(B.au,A.b([A.ate(0,A.fa("assets/images/contact_background.jpg",B.cT,s,s)),A.ej(A.b8(s,A.bU(A.b([A.agq("deshraj23raj@gmail.com","assets/assets/images/deshraj_sir.png","Desh Raj","+91 9041756096"),A.b5(s,20,s),A.agq("kamaljeets@iitrpr.ac.in",r,"Kamaljeet Singh","+91 9459646780"),A.b5(s,20,s),A.agq("gyaneshwar494@gmail.com",r,"Gyaneshwar","+91 7830523000"),A.b5(s,20,s),A.agq("jasmeensohi001@gmail.com",r,"Jasmeen Kaur","+91 6283053818")],q),B.ac,s,B.aX,B.n),B.j,s,s,s,s,s,s,s,s,s,400),s,s)],q),B.F,B.at,s))}}
+return A.iu(A.iS(s,A.aj("Contacts",s,s,s,s,s,s,s)),s,A.eD(B.au,A.b([A.ate(0,A.fa("assets/images/contact_background.jpg",B.cT,s,s)),A.ej(A.b8(s,A.bU(A.b([A.agq("deshraj23raj@gmail.com","assets/assets/images/deshraj_sir.png","Desh Raj","+91 9041756096"),A.b5(s,20,s),A.agq("kamaljeets@iitrpr.ac.in",r,"Kamaljeet Singh","+91 9459646780"),A.b5(s,20,s),A.agq("gyaneshwar494@gmail.com",r,"Gyaneshwar","+91 7830523000"),A.b5(s,20,s),A.agq("jasmeensohi001@gmail.com",r,"Jasmeen Kaur","+91 6283053818")],q),B.ac,s,B.aX,B.n),B.j,s,s,s,s,s,s,s,s,s,400),s,s)],q),B.F,B.at,s))}}
 A.SL.prototype={
 P(a){var s=this,r=null,q=A.qc(255,255,255,0.5),p=A.ml(12),o=A.b([new A.bR(2,B.P,A.v(B.d.aq(127.5),158,158,158),new A.e(0,3),5)],t.E),n=t.p
 return A.b8(r,A.bU(A.b([A.cG(A.b([A.b8(r,r,B.j,r,r,new A.ct(r,A.u8(B.cT,new A.zp(s.f)),r,r,r,r,B.dc),r,100,r,r,r,r,100),A.b5(r,r,20),A.cO(A.bU(A.b([A.aj("Name: "+s.c,r,r,r,A.bb(r,r,r,r,r,r,r,r,r,r,r,18,r,r,B.aA,r,r,!0,r,r,r,r,r,r,r,r),r,r,r),A.b5(r,8,r),A.aj("Phone: "+s.d,r,r,r,A.bb(r,r,r,r,r,r,r,r,r,r,r,16,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r,r),A.b5(r,8,r),A.aj("Email: "+s.e,r,r,r,A.bb(r,r,r,r,r,r,r,r,r,r,r,16,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r,r)],n),B.ac,r,B.u,B.n),1)],n),B.ac,r,B.u,B.n,r)],n),B.ac,r,B.u,B.n),B.j,r,r,new A.ct(q,r,r,p,o,r,B.Y),r,r,r,new A.al(10,10,10,10),r,r,1/0)},
@@ -56354,7 +56356,7 @@ o=A.iS(A.b([A.dU(A.aj("EXP 1",p,p,p,A.bb(p,p,B.bk,p,p,p,p,p,p,p,p,p,p,p,p,p,p,!0
 s=["assets/pdf/LEDD1.pdf","assets/pdf/LEDD2.pdf","assets/pdf/LEDD3.pdf","assets/pdf/LEDD4.pdf","assets/pdf/LEDD5.pdf","assets/pdf/LEDD6.pdf"][q.d]
 r=q.f
 r===$&&A.a()
-return A.iu(o,A.bU(A.b([A.cO(A.ZV(s,r,!0,q.e,new A.aHZ(),new A.aI_(),B.a9,B.ak),1),A.cG(A.b([A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_out.png",p,p,p),25,25),p,q.gapW(),p,p,p),A.b5(p,p,10),A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_in.png",p,p,p),25,25),p,q.gapU(),p,p,p)],n),B.v,p,B.aX,B.n,p)],n),B.v,p,B.u,B.n))}}
+return A.iu(o,p,A.bU(A.b([A.cO(A.ZV(s,r,!0,q.e,new A.aHZ(),new A.aI_(),B.a9,B.ak),1),A.cG(A.b([A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_out.png",p,p,p),25,25),p,q.gapW(),p,p,p),A.b5(p,p,10),A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_in.png",p,p,p),25,25),p,q.gapU(),p,p,p)],n),B.v,p,B.aX,B.n,p)],n),B.v,p,B.u,B.n))}}
 A.aHS.prototype={
 $0(){this.a.d=this.b},
 $S:0}
@@ -56401,7 +56403,7 @@ o=A.iS(A.b([A.dU(A.aj("EXP 1",p,p,p,A.bb(p,p,B.bk,p,p,p,p,p,p,p,p,p,p,p,p,p,p,!0
 s=["assets/pdf/Relay.pdf"][q.d]
 r=q.f
 r===$&&A.a()
-return A.iu(o,A.bU(A.b([A.cO(A.ZV(s,r,!0,q.e,new A.aK2(),new A.aK3(),B.a9,B.ak),1),A.cG(A.b([A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_out.png",p,p,p),25,25),p,q.gaNo(),p,p,p),A.b5(p,p,10),A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_in.png",p,p,p),25,25),p,q.gaNm(),p,p,p)],n),B.v,p,B.aX,B.n,p)],n),B.v,p,B.u,B.n))}}
+return A.iu(o,p,A.bU(A.b([A.cO(A.ZV(s,r,!0,q.e,new A.aK2(),new A.aK3(),B.a9,B.ak),1),A.cG(A.b([A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_out.png",p,p,p),25,25),p,q.gaNo(),p,p,p),A.b5(p,p,10),A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_in.png",p,p,p),25,25),p,q.gaNm(),p,p,p)],n),B.v,p,B.aX,B.n,p)],n),B.v,p,B.u,B.n))}}
 A.aK0.prototype={
 $0(){this.a.d=this.b},
 $S:0}
@@ -56433,7 +56435,7 @@ o=A.iS(A.b([A.dU(A.aj("EXP 1",p,p,p,A.bb(p,p,B.bk,p,p,p,p,p,p,p,p,p,p,p,p,p,p,!0
 s=["assets/pdf/SHT401.pdf","assets/pdf/SHT402.pdf"][q.d]
 r=q.f
 r===$&&A.a()
-return A.iu(o,A.bU(A.b([A.cO(A.ZV(s,r,!0,q.e,new A.aL2(),new A.aL3(),B.a9,B.ak),1),A.cG(A.b([A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_out.png",p,p,p),25,25),p,q.gaq4(),p,p,p),A.b5(p,p,10),A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_in.png",p,p,p),25,25),p,q.gaq2(),p,p,p)],n),B.v,p,B.aX,B.n,p)],n),B.v,p,B.u,B.n))}}
+return A.iu(o,p,A.bU(A.b([A.cO(A.ZV(s,r,!0,q.e,new A.aL2(),new A.aL3(),B.a9,B.ak),1),A.cG(A.b([A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_out.png",p,p,p),25,25),p,q.gaq4(),p,p,p),A.b5(p,p,10),A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_in.png",p,p,p),25,25),p,q.gaq2(),p,p,p)],n),B.v,p,B.aX,B.n,p)],n),B.v,p,B.u,B.n))}}
 A.aL_.prototype={
 $0(){this.a.d=this.b},
 $S:0}
@@ -56463,7 +56465,7 @@ p=t.p
 q=A.q8(A.eD(B.au,A.b([new A.b9(new A.al(10,10,10,10),A.cG(A.b([n,m,s,r,A.f8(A.aj("About Us",o,o,o,A.bb(o,o,B.l,o,o,o,o,o,o,o,o,o,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),new A.ad1(a),q)],p),B.v,o,B.h8,B.n,o),o)],p),B.F,B.at,o),o,5,new A.al(10,10,10,10))
 r=A.iS(o,A.aj("ABOUT US",o,o,o,A.bb(o,o,A.v(255,81,34,3),o,o,o,o,o,o,o,o,28,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o))
 s=A.u8(B.cT,new A.jx("assets/images/About_us_page_final.png",o,o))
-return A.iu(o,A.jc(A.bU(A.b([q,r,A.b8(o,new A.b9(B.LI,A.bU(A.b([A.b5(o,20,o),A.aj("Preamble",o,o,o,A.bb(o,o,B.l,o,o,o,o,o,o,o,o,24,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,10,o),A.aj("About iHub-AWaDH",o,o,o,A.bb(o,o,A.v(255,2,2,2),o,o,o,o,o,o,o,o,20,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,10,o),A.b5(o,10,o),A.aj("iHub-AWaDH, which stands for Innovation Hub for Agriculture and Water Technology Development Hub, is a dedicated initiative hosted at IIT Ropar Technology and Innovation Foundation established under National Mission on Interdisciplinary Cyber Physical Systems by Department of Science and Technology, Government of India. It aims to foster and promote deep tech innovation in the domains of Agriculture and Water, leveraging cutting-edge technologies like Cyber Physical Systems (CPS), Internet of Things (IoT), Artificial Intelligence (AI), and more. The iHub-AWaDH plays a pivotal role in accelerating the growth of startups, driving research, and building a strong ecosystem to address critical challenges in the agricultural and water sectors. Through strategic partnerships, incubation support, and collaborative programs, iHub-AWaDH aims to bring positive transformation and sustainable solutions for a better future.",o,o,o,A.bb(o,o,A.v(255,6,6,6),o,o,o,o,o,o,o,o,o,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,20,o),A.aj("CPS Lab Proposal",o,o,o,A.bb(o,o,A.v(255,4,4,4),o,o,o,o,o,o,o,o,20,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,10,o),A.aj("Introduction",o,o,o,A.bb(o,o,A.v(255,3,3,3),o,o,o,o,o,o,o,o,18,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,10,o),A.aj("Cyber-physical systems (CPS) play a pivotal role in shaping the future of various industries and societal domains. Their importance lies in their ability to bridge the gap between the digital world of computing and the physical world of machinery and processes. CPS serves as the foundation for Internet of Things (IoT), providing the necessary hardware and software infrastructure to connect and control the physical devices in the IoT ecosystem. The data collected from IoT devices is often processed and analyzed by CPS to make real-time decisions and trigger appropriate actions. The IoT lab is one of the crucial elements of the CPS lab.",o,o,o,A.bb(o,o,A.v(255,5,4,4),o,o,o,o,o,o,o,o,o,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,20,o),A.aj("Objectives",o,o,o,A.bb(o,o,A.v(255,5,3,3),o,o,o,o,o,o,o,o,18,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,10,o),A.bU(A.b([new A.vq("1","Education and Training: To provide professionals, researchers, and students with real-world knowledge and abilities in IoT-related smart technologies.",o),new A.vq("2","Research and Development: To promote and aid in the research activities in the IoT sector, examining fresh concepts and creating ground-breaking solutions.",o),new A.vq("3","Prototyping and Testing: To offer a platform for the prototyping and testing of IoT gadgets, sensors, and smart solutions software.",o),new A.vq("4","Collaboration: Encourage students, researchers, business leaders, and other stakeholders to work together to share information and create cutting-edge IoT solutions.",o)],p),B.ac,o,B.u,B.n),A.b5(o,20,o),A.aj("Lab Activities and Services",o,o,o,A.bb(o,o,A.v(255,2,2,2),o,o,o,o,o,o,o,o,18,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,10,o),A.bU(A.b([new A.qA("Workshops and training sessions: Hold frequent workshops and training sessions to inform participants about IoT technologies, smart home ideas, industrial solutions and practical CPS & IoT application development.",o),new A.qA("Research initiatives: Assemble research teams to work on CPS & IoT initiatives with academic institutions and business partners. This can entail investigating new sensor technologies, improving energy effectiveness, strengthening security and privacy, or creating original apps.",o),new A.qA("Prototyping and Testing: Make tools and support available for prototyping and testing CPS & IoT applications and devices, enabling users to test out various configurations and situations.",o),new A.qA("Consultancy: Provide advisory services to people, businesses, and organizations interested in putting smart industrial ideas into practice. This could involve system integration, architecture design, and best practices for security and privacy.",o),new A.qA("Community Engagement: Host competitions, hackathons, and events to involve the neighborhood, encourage creativity, and highlight the IoT's possibilities for smart solutions.",o)],p),B.ac,o,B.u,B.n)],p),B.ac,o,B.u,B.n),o),B.j,o,o,new A.ct(o,s,o,o,o,o,B.Y),o,o,o,o,o,o,o)],p),B.bS,o,B.u,B.n),o,o,o,B.a_))}}
+return A.iu(o,o,A.jc(A.bU(A.b([q,r,A.b8(o,new A.b9(B.LI,A.bU(A.b([A.b5(o,20,o),A.aj("Preamble",o,o,o,A.bb(o,o,B.l,o,o,o,o,o,o,o,o,24,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,10,o),A.aj("About iHub-AWaDH",o,o,o,A.bb(o,o,A.v(255,2,2,2),o,o,o,o,o,o,o,o,20,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,10,o),A.b5(o,10,o),A.aj("iHub-AWaDH, which stands for Innovation Hub for Agriculture and Water Technology Development Hub, is a dedicated initiative hosted at IIT Ropar Technology and Innovation Foundation established under National Mission on Interdisciplinary Cyber Physical Systems by Department of Science and Technology, Government of India. It aims to foster and promote deep tech innovation in the domains of Agriculture and Water, leveraging cutting-edge technologies like Cyber Physical Systems (CPS), Internet of Things (IoT), Artificial Intelligence (AI), and more. The iHub-AWaDH plays a pivotal role in accelerating the growth of startups, driving research, and building a strong ecosystem to address critical challenges in the agricultural and water sectors. Through strategic partnerships, incubation support, and collaborative programs, iHub-AWaDH aims to bring positive transformation and sustainable solutions for a better future.",o,o,o,A.bb(o,o,A.v(255,6,6,6),o,o,o,o,o,o,o,o,o,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,20,o),A.aj("CPS Lab Proposal",o,o,o,A.bb(o,o,A.v(255,4,4,4),o,o,o,o,o,o,o,o,20,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,10,o),A.aj("Introduction",o,o,o,A.bb(o,o,A.v(255,3,3,3),o,o,o,o,o,o,o,o,18,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,10,o),A.aj("Cyber-physical systems (CPS) play a pivotal role in shaping the future of various industries and societal domains. Their importance lies in their ability to bridge the gap between the digital world of computing and the physical world of machinery and processes. CPS serves as the foundation for Internet of Things (IoT), providing the necessary hardware and software infrastructure to connect and control the physical devices in the IoT ecosystem. The data collected from IoT devices is often processed and analyzed by CPS to make real-time decisions and trigger appropriate actions. The IoT lab is one of the crucial elements of the CPS lab.",o,o,o,A.bb(o,o,A.v(255,5,4,4),o,o,o,o,o,o,o,o,o,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,20,o),A.aj("Objectives",o,o,o,A.bb(o,o,A.v(255,5,3,3),o,o,o,o,o,o,o,o,18,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,10,o),A.bU(A.b([new A.vq("1","Education and Training: To provide professionals, researchers, and students with real-world knowledge and abilities in IoT-related smart technologies.",o),new A.vq("2","Research and Development: To promote and aid in the research activities in the IoT sector, examining fresh concepts and creating ground-breaking solutions.",o),new A.vq("3","Prototyping and Testing: To offer a platform for the prototyping and testing of IoT gadgets, sensors, and smart solutions software.",o),new A.vq("4","Collaboration: Encourage students, researchers, business leaders, and other stakeholders to work together to share information and create cutting-edge IoT solutions.",o)],p),B.ac,o,B.u,B.n),A.b5(o,20,o),A.aj("Lab Activities and Services",o,o,o,A.bb(o,o,A.v(255,2,2,2),o,o,o,o,o,o,o,o,18,o,o,B.aA,o,o,!0,o,o,o,o,o,o,o,o),o,o,o),A.b5(o,10,o),A.bU(A.b([new A.qA("Workshops and training sessions: Hold frequent workshops and training sessions to inform participants about IoT technologies, smart home ideas, industrial solutions and practical CPS & IoT application development.",o),new A.qA("Research initiatives: Assemble research teams to work on CPS & IoT initiatives with academic institutions and business partners. This can entail investigating new sensor technologies, improving energy effectiveness, strengthening security and privacy, or creating original apps.",o),new A.qA("Prototyping and Testing: Make tools and support available for prototyping and testing CPS & IoT applications and devices, enabling users to test out various configurations and situations.",o),new A.qA("Consultancy: Provide advisory services to people, businesses, and organizations interested in putting smart industrial ideas into practice. This could involve system integration, architecture design, and best practices for security and privacy.",o),new A.qA("Community Engagement: Host competitions, hackathons, and events to involve the neighborhood, encourage creativity, and highlight the IoT's possibilities for smart solutions.",o)],p),B.ac,o,B.u,B.n)],p),B.ac,o,B.u,B.n),o),B.j,o,o,new A.ct(o,s,o,o,o,o,B.Y),o,o,o,o,o,o,o)],p),B.bS,o,B.u,B.n),o,o,o,B.a_))}}
 A.acZ.prototype={
 $0(){A.e9(this.a,"/home",t.X)},
 $S:0}
@@ -56486,7 +56488,7 @@ A.tR.prototype={
 ag(){return new A.a1R(B.i)}}
 A.a1R.prototype={
 P(a){var s=null
-return A.iu(A.iS(s,A.aj("Button Experiment",s,s,s,s,s,s,s)),s)}}
+return A.iu(A.iS(s,A.aj("Button Experiment",s,s,s,s,s,s,s)),s,s)}}
 A.tZ.prototype={
 ag(){var s=$.av()
 return new A.LJ(new A.fQ(B.bI,s),new A.fQ(B.bI,s),new A.fQ(B.bI,s),new A.fQ(B.bI,s),B.i)}}
@@ -56572,7 +56574,7 @@ A.dn(g,!1).kt(n)}else A.eS("Failed to load data. Status code: "+n)
 return A.E(null,r)}})
 return A.F($async$po,r)},
 P(a){var s=this,r=null,q=A.ar(a,r,t.w).w.a,p=A.iS(r,A.aj("Co2 Sensor Data",r,r,r,r,r,r,r)),o=A.u8(B.cT,new A.jx("assets/images/co2_bg.jpg",r,r)),n=A.fa("assets/images/weather.png",r,200,500),m=A.v(B.d.aq(127.5),255,255,255),l=t.p
-return A.iu(p,A.b8(r,A.ej(A.bU(A.b([n,A.q8(A.b8(r,A.bU(A.b([A.rI(!0,B.bM,!1,r,!0,B.F,r,A.xq(),s.d,r,r,r,r,r,2,A.j3(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Enter Gateway ID",r,r,r,r,r,r,r,r,r,r,r,r,r),B.T,!0,r,!0,r,!1,r,r,r,r,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,r,!1,r,!1,r,!0,r,B.cY,r,r,B.bL,B.bp,r,r,r,r,r,r,r,B.aw,r,B.d4,r,r,r,r),A.rI(!0,B.bM,!1,r,!0,B.F,r,A.xq(),s.e,r,r,r,r,r,2,A.j3(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Enter Node ID",r,r,r,r,r,r,r,r,r,r,r,r,r),B.T,!0,r,!0,r,!1,r,r,r,r,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,r,!1,r,!1,r,!0,r,B.cY,r,r,B.bL,B.bp,r,r,r,r,r,r,r,B.aw,r,B.d4,r,r,r,r),A.rI(!0,B.bM,!1,r,!0,B.F,r,A.xq(),s.f,r,r,r,r,r,2,A.j3(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Enter Start Date & Time",r,r,r,r,r,r,r,r,r,r,r,r,r),B.T,!0,r,!0,r,!1,r,r,r,r,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,new A.aEe(s,a),!1,r,!0,r,!0,r,B.cY,r,r,B.bL,B.bp,r,r,r,r,r,r,r,B.aw,r,B.d4,r,r,r,r),A.rI(!0,B.bM,!1,r,!0,B.F,r,A.xq(),s.r,r,r,r,r,r,2,A.j3(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Enter End Date & Time",r,r,r,r,r,r,r,r,r,r,r,r,r),B.T,!0,r,!0,r,!1,r,r,r,r,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,new A.aEf(s,a),!1,r,!0,r,!0,r,B.cY,r,r,B.bL,B.bp,r,r,r,r,r,r,r,B.aw,r,B.d4,r,r,r,r),A.b5(r,16,r),A.ej(A.f8(A.aj("Submit",r,r,r,r,r,r,r),s.gUq(),A.f9(r,r,B.k,r,r,r,r,r,r,r,r,r,new A.al(20,16,20,16),r,r,new A.aT(B.eQ,2,B.t,-1),r,r,A.bb(r,r,r,r,r,r,r,r,r,r,r,18,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r)),r,r)],l),B.ac,r,B.aX,B.n),B.j,r,r,r,r,q.b*0.6,r,B.cX,r,r,q.a*0.8),m,5,r)],l),B.v,r,B.aX,B.n),r,r),B.j,r,r,new A.ct(r,o,r,r,r,r,B.Y),r,r,r,r,r,r,r))}}
+return A.iu(p,r,A.b8(r,A.ej(A.bU(A.b([n,A.q8(A.b8(r,A.bU(A.b([A.rI(!0,B.bM,!1,r,!0,B.F,r,A.xq(),s.d,r,r,r,r,r,2,A.j3(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Enter Gateway ID",r,r,r,r,r,r,r,r,r,r,r,r,r),B.T,!0,r,!0,r,!1,r,r,r,r,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,r,!1,r,!1,r,!0,r,B.cY,r,r,B.bL,B.bp,r,r,r,r,r,r,r,B.aw,r,B.d4,r,r,r,r),A.rI(!0,B.bM,!1,r,!0,B.F,r,A.xq(),s.e,r,r,r,r,r,2,A.j3(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Enter Node ID",r,r,r,r,r,r,r,r,r,r,r,r,r),B.T,!0,r,!0,r,!1,r,r,r,r,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,r,!1,r,!1,r,!0,r,B.cY,r,r,B.bL,B.bp,r,r,r,r,r,r,r,B.aw,r,B.d4,r,r,r,r),A.rI(!0,B.bM,!1,r,!0,B.F,r,A.xq(),s.f,r,r,r,r,r,2,A.j3(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Enter Start Date & Time",r,r,r,r,r,r,r,r,r,r,r,r,r),B.T,!0,r,!0,r,!1,r,r,r,r,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,new A.aEe(s,a),!1,r,!0,r,!0,r,B.cY,r,r,B.bL,B.bp,r,r,r,r,r,r,r,B.aw,r,B.d4,r,r,r,r),A.rI(!0,B.bM,!1,r,!0,B.F,r,A.xq(),s.r,r,r,r,r,r,2,A.j3(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Enter End Date & Time",r,r,r,r,r,r,r,r,r,r,r,r,r),B.T,!0,r,!0,r,!1,r,r,r,r,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,new A.aEf(s,a),!1,r,!0,r,!0,r,B.cY,r,r,B.bL,B.bp,r,r,r,r,r,r,r,B.aw,r,B.d4,r,r,r,r),A.b5(r,16,r),A.ej(A.f8(A.aj("Submit",r,r,r,r,r,r,r),s.gUq(),A.f9(r,r,B.k,r,r,r,r,r,r,r,r,r,new A.al(20,16,20,16),r,r,new A.aT(B.eQ,2,B.t,-1),r,r,A.bb(r,r,r,r,r,r,r,r,r,r,r,18,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r)),r,r)],l),B.ac,r,B.aX,B.n),B.j,r,r,r,r,q.b*0.6,r,B.cX,r,r,q.a*0.8),m,5,r)],l),B.v,r,B.aX,B.n),r,r),B.j,r,r,new A.ct(r,o,r,r,r,r,B.Y),r,r,r,r,r,r,r))}}
 A.aEd.prototype={
 $0(){var s=this.a,r=s.w=this.b
 s.y=B.e.aF(r.a,1000)
@@ -56595,7 +56597,7 @@ $S:0}
 A.AE.prototype={
 P(a){var s=null,r=this.c
 r.ei(0,new A.awm())
-return A.iu(A.iS(s,A.aj("Fetched Data",s,s,s,A.bb(s,s,s,s,s,s,s,s,s,s,s,30,s,s,B.aA,s,s,!0,s,s,s,s,s,s,s,s),s,s,s)),new A.b9(B.cX,A.bU(A.b([A.aj("  ",s,s,s,A.bb(s,s,s,s,s,s,s,s,s,s,s,20,s,s,B.aA,s,s,!0,s,s,s,s,s,s,s,s),s,s,s),A.cO(A.Vm(new A.awn(this),r.gA(r),s),1)],t.p),B.ac,s,B.u,B.n),s))}}
+return A.iu(A.iS(s,A.aj("Fetched Data",s,s,s,A.bb(s,s,s,s,s,s,s,s,s,s,s,30,s,s,B.aA,s,s,!0,s,s,s,s,s,s,s,s),s,s,s)),s,new A.b9(B.cX,A.bU(A.b([A.aj("  ",s,s,s,A.bb(s,s,s,s,s,s,s,s,s,s,s,20,s,s,B.aA,s,s,!0,s,s,s,s,s,s,s,s),s,s,s),A.cO(A.Vm(new A.awn(this),r.gA(r),s),1)],t.p),B.ac,s,B.u,B.n),s))}}
 A.awm.prototype={
 $2(a,b){var s="timestamp"
 return J.tB(J.am(b,s),J.am(a,s))},
@@ -56624,7 +56626,7 @@ o=A.iS(A.b([A.dU(A.aj("EXP 1",p,p,p,A.bb(p,p,B.bk,p,p,p,p,p,p,p,p,p,p,p,p,p,p,!0
 s=["assets/pdf/LIS3DH2.pdf"][q.d]
 r=q.f
 r===$&&A.a()
-return A.iu(o,A.bU(A.b([A.cO(A.ZV(s,r,!0,q.e,new A.aI2(),new A.aI3(),B.a9,B.ak),1),A.cG(A.b([A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_out.png",p,p,p),25,25),p,q.gaDQ(),p,p,p),A.b5(p,p,10),A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_in.png",p,p,p),25,25),p,q.gaDO(),p,p,p)],n),B.v,p,B.aX,B.n,p)],n),B.v,p,B.u,B.n))}}
+return A.iu(o,p,A.bU(A.b([A.cO(A.ZV(s,r,!0,q.e,new A.aI2(),new A.aI3(),B.a9,B.ak),1),A.cG(A.b([A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_out.png",p,p,p),25,25),p,q.gaDQ(),p,p,p),A.b5(p,p,10),A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_in.png",p,p,p),25,25),p,q.gaDO(),p,p,p)],n),B.v,p,B.aX,B.n,p)],n),B.v,p,B.u,B.n))}}
 A.aI0.prototype={
 $0(){this.a.d=this.b},
 $S:0}
@@ -56687,19 +56689,19 @@ $S:451}
 A.vm.prototype={
 ag(){return new A.a5t(new A.afq(new A.bE(new A.aG($.aQ,t.wC),t.Fe)),B.i)}}
 A.a5t.prototype={
-P(a){var s,r,q,p,o,n,m,l,k,j=null,i=A.u8(B.cT,new A.jx("assets/images/back_front_new.png",j,j)),h=A.ml(15),g=A.b([new A.bR(0,B.P,A.v(B.d.aq(76.5),0,0,0),new A.e(0,3),5)],t.E),f=A.fa("assets/images/awadh_logo.jpeg",j,55,j),e=A.f9(j,j,A.v(255,247,216,178),j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j)
-e=A.f8(A.aj("Home",j,j,j,A.bb(j,j,B.l,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),new A.aIR(a),e)
+P(a){var s,r,q,p,o,n,m,l,k,j=null,i=A.v(255,234,179,132),h=A.u8(B.cT,new A.jx("assets/images/back_front_new.png",j,j)),g=A.ml(15),f=A.b([new A.bR(0,B.P,A.v(B.d.aq(76.5),0,0,0),new A.e(0,3),5)],t.E),e=A.fa("assets/images/awadh_logo.jpeg",j,55,j),d=A.f9(j,j,A.v(255,247,216,178),j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j)
+d=A.f8(A.aj("Home",j,j,j,A.bb(j,j,B.l,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),new A.aIR(a),d)
 s=A.f9(j,j,A.v(255,247,216,178),j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j)
 s=A.f8(A.aj("CPS Lab Hardwares",j,j,j,A.bb(j,j,B.l,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),new A.aIS(a),s)
 r=A.f9(j,j,A.v(255,247,216,178),j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j)
 r=A.f8(A.aj("CPS Lab Tutorial",j,j,j,A.bb(j,j,B.l,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),new A.aIT(a),r)
 q=A.f9(j,j,A.v(255,247,216,178),j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j)
 p=t.p
-q=A.b8(j,A.q8(A.eD(B.au,A.b([new A.b9(new A.al(10,10,10,10),A.cG(A.b([f,e,s,r,A.f8(A.aj("About Us",j,j,j,A.bb(j,j,B.l,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),new A.aIU(a),q)],p),B.v,j,B.h8,B.n,j),j)],p),B.F,B.at,j),j,5,new A.al(10,10,10,10)),B.j,j,j,j,j,j,j,j,j,j,j)
+q=A.b8(j,A.q8(A.eD(B.au,A.b([new A.b9(new A.al(10,10,10,10),A.cG(A.b([e,d,s,r,A.f8(A.aj("About Us",j,j,j,A.bb(j,j,B.l,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),new A.aIU(a),q)],p),B.v,j,B.h8,B.n,j),j)],p),B.F,B.at,j),j,5,new A.al(10,10,10,10)),B.j,j,j,j,j,j,j,j,j,j,j)
 r=A.b5(j,10,j)
 s=A.b5(j,5,j)
-e=A.aj("Agriculture & Water Technology Development Hub (AWaDH)",j,j,j,A.bb(j,j,B.l,j,j,j,j,j,"FontMain",j,j,40,j,j,B.aA,j,j,!0,j,j,j,j,j,j,j,j),j,j,j)
-f=A.b5(j,20,j)
+d=A.aj("Agriculture & Water Technology Development Hub (AWaDH)",j,j,j,A.bb(j,j,B.l,j,j,j,j,j,"FontMain",j,j,40,j,j,B.aA,j,j,!0,j,j,j,j,j,j,j,j),j,j,j)
+e=A.b5(j,20,j)
 o=t.Yx
 o=A.af(new A.ax(A.b(["iot_lab.png","Awadh_logo_New-removebg-preview.png","New_deployment_pic-removebg-preview.png","Iot_logo_Picture_final-removebg-preview.png","awadh_banner.jpeg"],t.s),new A.aIV(),o),!0,o.j("b0.E"))
 n=o.length
@@ -56707,7 +56709,7 @@ m=A.f9(j,j,A.v(255,255,255,255),j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j)
 m=A.f8(A.aj("SENSORS",j,j,j,A.bb(j,j,B.l,j,j,j,j,j,j,j,j,j,j,j,B.aA,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),new A.aIW(a),m)
 l=A.b5(j,j,100)
 k=A.f9(j,j,A.v(255,255,255,255),j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j)
-return A.iu(j,A.ej(A.b8(j,A.jc(A.bU(A.b([q,r,A.b8(j,A.bU(A.b([s,e,f,new A.E9(new A.afr(400,1.7777777777777777,!1,!0),o,this.d,n,j),A.b8(j,A.eD(B.au,A.b([new A.b9(new A.al(10,10,10,10),A.cG(A.b([m,l,A.f8(A.aj("Contact Us",j,j,j,A.bb(j,j,B.l,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),new A.aIX(a),k)],p),B.v,j,B.cD,B.n,j),j)],p),B.F,B.at,j),B.j,j,j,j,j,j,j,j,j,j,j)],p),B.v,j,B.aX,B.n),B.j,j,j,j,j,j,new A.al(20,0,20,0),j,j,j,j)],p),B.v,j,B.u,B.n),j,new A.Dp(j),j,B.a_),B.j,j,j,new A.ct(j,i,j,h,g,j,B.Y),j,700,j,j,j,j,1200),j,j))}}
+return A.iu(j,i,A.ej(A.b8(j,A.jc(A.bU(A.b([q,r,A.b8(j,A.bU(A.b([s,d,e,new A.E9(new A.afr(400,1.7777777777777777,!1,!0),o,this.d,n,j),A.b8(j,A.eD(B.au,A.b([new A.b9(new A.al(10,10,10,10),A.cG(A.b([m,l,A.f8(A.aj("Contact Us",j,j,j,A.bb(j,j,B.l,j,j,j,j,j,j,j,j,j,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),new A.aIX(a),k)],p),B.v,j,B.cD,B.n,j),j)],p),B.F,B.at,j),B.j,j,j,j,j,j,j,j,j,j,j)],p),B.v,j,B.aX,B.n),B.j,j,j,j,j,j,new A.al(20,0,20,0),j,j,j,j)],p),B.v,j,B.u,B.n),j,new A.Dp(j),j,B.a_),B.j,j,j,new A.ct(j,h,j,g,f,j,B.Y),j,800,j,j,j,j,1400),j,j))}}
 A.aIR.prototype={
 $0(){A.e9(this.a,"/home",t.X)},
 $S:0}
@@ -56735,7 +56737,7 @@ $0(){A.e9(this.a,"/ContactUS",t.X)},
 $S:0}
 A.AL.prototype={
 P(a){var s=null,r=A.iS(s,A.aj("SENSORS",s,s,s,A.bb(s,s,A.v(255,81,34,3),s,s,s,s,s,s,s,s,28,s,s,B.aA,s,s,!0,s,s,s,s,s,s,s,s),s,s,s)),q=A.u8(B.cT,new A.jx("./../assets/assets/images/pastel_bg_sensor.png",s,s)),p=t.p
-return A.iu(s,A.bU(A.b([r,A.cO(A.b8(s,A.ej(A.jc(A.aTu(B.F2,A.b([this.mS(a,"CO2 Sensor","assets/images/Co2_Sensor_new.png",new A.awX(a)),this.mS(a,"Weather Sensor",u.J,new A.awY(a))],p),20,20),s,s,s,B.a_),s,s),B.j,s,s,new A.ct(s,q,s,s,s,s,B.Y),s,s,s,s,s,s,s),1)],p),B.v,s,B.u,B.n))},
+return A.iu(s,s,A.bU(A.b([r,A.cO(A.b8(s,A.ej(A.jc(A.aTu(B.F2,A.b([this.mS(a,"CO2 Sensor","assets/images/Co2_Sensor_new.png",new A.awX(a)),this.mS(a,"Weather Sensor",u.J,new A.awY(a))],p),20,20),s,s,s,B.a_),s,s),B.j,s,s,new A.ct(s,q,s,s,s,s,B.Y),s,s,s,s,s,s,s),1)],p),B.v,s,B.u,B.n))},
 mS(a,b,c,d){var s,r,q,p=null,o=B.d.aq(127.5),n=A.v(o,255,255,255),m=A.ml(10)
 o=A.b([new A.bR(2,B.P,A.v(o,158,158,158),new A.e(0,3),5)],t.E)
 s=A.fa(c,p,p,p)
@@ -56765,7 +56767,7 @@ o=A.iS(A.b([A.dU(A.aj("EXP 1",p,p,p,A.bb(p,p,B.bk,p,p,p,p,p,p,p,p,p,p,p,p,p,p,!0
 s=["assets/pdf/STTS7511.pdf"][q.d]
 r=q.f
 r===$&&A.a()
-return A.iu(o,A.bU(A.b([A.cO(A.ZV(s,r,!0,q.e,new A.aL6(),new A.aL7(),B.a9,B.ak),1),A.cG(A.b([A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_out.png",p,p,p),25,25),p,q.gaLa(),p,p,p),A.b5(p,p,10),A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_in.png",p,p,p),25,25),p,q.gaL8(),p,p,p)],n),B.v,p,B.aX,B.n,p)],n),B.v,p,B.u,B.n))}}
+return A.iu(o,p,A.bU(A.b([A.cO(A.ZV(s,r,!0,q.e,new A.aL6(),new A.aL7(),B.a9,B.ak),1),A.cG(A.b([A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_out.png",p,p,p),25,25),p,q.gaLa(),p,p,p),A.b5(p,p,10),A.fq(p,p,p,A.b5(A.fa("assets/images/zoom_in.png",p,p,p),25,25),p,q.gaL8(),p,p,p)],n),B.v,p,B.aX,B.n,p)],n),B.v,p,B.u,B.n))}}
 A.aL4.prototype={
 $0(){this.a.d=this.b},
 $S:0}
@@ -56888,7 +56890,7 @@ return A.F($async$po,r)},
 P(a){var s,r=this,q=null,p=A.ar(a,q,t.w).w.a,o=A.iS(q,A.aj("Weather Data",q,q,q,q,q,q,q)),n=A.ate(0,A.fa("assets/images/weather_bg.jpg",B.cT,q,q)),m=A.fa("assets/images/weather.png",q,200,500),l=A.v(B.d.aq(127.5),255,255,255),k=A.rI(!0,B.bM,!1,q,!0,B.F,q,A.xq(),r.d,q,q,q,q,q,2,A.j3(q,q,q,q,q,q,q,q,!0,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,"Enter Gateway ID",q,q,q,q,q,q,q,q,q,q,q,q,q),B.T,!0,q,!0,q,!1,q,q,q,q,q,q,q,1,q,q,!1,"\u2022",q,q,q,q,q,!1,q,!1,q,!0,q,B.cY,q,q,B.bL,B.bp,q,q,q,q,q,q,q,B.aw,q,B.d4,q,q,q,q),j=A.rI(!0,B.bM,!1,q,!0,B.F,q,A.xq(),r.e,q,q,q,q,q,2,A.j3(q,q,q,q,q,q,q,q,!0,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,"Enter Node ID",q,q,q,q,q,q,q,q,q,q,q,q,q),B.T,!0,q,!0,q,!1,q,q,q,q,q,q,q,1,q,q,!1,"\u2022",q,q,q,q,q,!1,q,!1,q,!0,q,B.cY,q,q,B.bL,B.bp,q,q,q,q,q,q,q,B.aw,q,B.d4,q,q,q,q),i=A.rI(!0,B.bM,!1,q,!0,B.F,q,A.xq(),r.f,q,q,q,q,q,2,A.j3(q,q,q,q,q,q,q,q,!0,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,"Enter Start Date & Time",q,q,q,q,q,q,q,q,q,q,q,q,q),B.T,!0,q,!0,q,!1,q,q,q,q,q,q,q,1,q,q,!1,"\u2022",q,q,q,q,new A.aNf(r,a),!1,q,!0,q,!0,q,B.cY,q,q,B.bL,B.bp,q,q,q,q,q,q,q,B.aw,q,B.d4,q,q,q,q),h=A.rI(!0,B.bM,!1,q,!0,B.F,q,A.xq(),r.r,q,q,q,q,q,2,A.j3(q,q,q,q,q,q,q,q,!0,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,"Enter End Date & Time",q,q,q,q,q,q,q,q,q,q,q,q,q),B.T,!0,q,!0,q,!1,q,q,q,q,q,q,q,1,q,q,!1,"\u2022",q,q,q,q,new A.aNg(r,a),!1,q,!0,q,!0,q,B.cY,q,q,B.bL,B.bp,q,q,q,q,q,q,q,B.aw,q,B.d4,q,q,q,q),g=A.b5(q,16,q),f=r.Q,e=f?q:r.gUq()
 f=f?A.aWP(q,q):A.aj("Submit",q,q,q,q,q,q,q)
 s=t.p
-return A.iu(o,A.eD(B.au,A.b([n,A.ej(A.bU(A.b([m,A.q8(A.b8(q,A.bU(A.b([k,j,i,h,g,A.ej(A.f8(f,e,A.f9(q,q,B.k,q,q,q,q,q,q,q,q,q,new A.al(20,16,20,16),q,q,new A.aT(B.eQ,2,B.t,-1),q,q,A.bb(q,q,q,q,q,q,q,q,q,q,q,18,q,q,q,q,q,!0,q,q,q,q,q,q,q,q),q)),q,q)],s),B.ac,q,B.aX,B.n),B.j,q,q,q,q,p.b*0.6,q,B.cX,q,q,p.a*0.8),l,5,q)],s),B.v,q,B.aX,B.n),q,q)],s),B.F,B.at,q))}}
+return A.iu(o,q,A.eD(B.au,A.b([n,A.ej(A.bU(A.b([m,A.q8(A.b8(q,A.bU(A.b([k,j,i,h,g,A.ej(A.f8(f,e,A.f9(q,q,B.k,q,q,q,q,q,q,q,q,q,new A.al(20,16,20,16),q,q,new A.aT(B.eQ,2,B.t,-1),q,q,A.bb(q,q,q,q,q,q,q,q,q,q,q,18,q,q,q,q,q,!0,q,q,q,q,q,q,q,q),q)),q,q)],s),B.ac,q,B.aX,B.n),B.j,q,q,q,q,p.b*0.6,q,B.cX,q,q,p.a*0.8),l,5,q)],s),B.v,q,B.aX,B.n),q,q)],s),B.F,B.at,q))}}
 A.aNe.prototype={
 $0(){var s=this.a,r=s.w=this.b
 s.y=B.e.aF(r.a,1000)
@@ -56923,7 +56925,7 @@ else if(r>2000&&r<=4000)return"assets/images/partially_sunny.png"
 else return"assets/images/sunny.png"},
 P(a){var s=null,r=this.c
 r.ei(0,new A.awo())
-return A.iu(A.iS(s,A.aj("Fetched Data",s,s,s,A.bb(s,s,s,s,s,s,s,s,s,s,s,30,s,s,B.aA,s,s,!0,s,s,s,s,s,s,s,s),s,s,s)),new A.b9(B.cX,A.bU(A.b([A.aj("  ",s,s,s,A.bb(s,s,s,s,s,s,s,s,s,s,s,20,s,s,B.aA,s,s,!0,s,s,s,s,s,s,s,s),s,s,s),A.cO(A.Vm(new A.awp(this),r.gA(r),s),1)],t.p),B.ac,s,B.u,B.n),s))}}
+return A.iu(A.iS(s,A.aj("Fetched Data",s,s,s,A.bb(s,s,s,s,s,s,s,s,s,s,s,30,s,s,B.aA,s,s,!0,s,s,s,s,s,s,s,s),s,s,s)),s,new A.b9(B.cX,A.bU(A.b([A.aj("  ",s,s,s,A.bb(s,s,s,s,s,s,s,s,s,s,s,20,s,s,B.aA,s,s,!0,s,s,s,s,s,s,s,s),s,s,s),A.cO(A.Vm(new A.awp(this),r.gA(r),s),1)],t.p),B.ac,s,B.u,B.n),s))}}
 A.awo.prototype={
 $2(a,b){var s="timestamp"
 return J.tB(J.am(b,s),J.am(a,s))},
@@ -70295,8 +70297,9 @@ f=A.ar(a,B.kQ,f).w
 f=f.f.d!==0?0:i
 k=q.w.IM(f)
 if(l.d<=0)j.a.toString
-j.a.toString
-return new A.a7U(!1,new A.Jk(A.h0(B.J,!0,i,A.ia(j.ch,new A.avw(h,j,!1,l,k,s,r),i),B.j,g.id,0,i,i,i,i,i,B.bN),i),i)}}
+f=j.a.ch
+if(f==null)f=g.id
+return new A.a7U(!1,new A.Jk(A.h0(B.J,!0,i,A.ia(j.ch,new A.avw(h,j,!1,l,k,s,r),i),B.j,f,0,i,i,i,i,i,B.bN),i),i)}}
 A.avv.prototype={
 $0(){this.a.z=this.b},
 $S:0}
